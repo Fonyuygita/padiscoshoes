@@ -67,6 +67,7 @@ export default function Cart({params}) {
                 height={392}
                 className="rounded-lg"
               />
+              <p>{findProduct.description}</p>
             </motion.div>
             {/*sizes*/}
             <div className="flex items-center justify-center gap-4">
