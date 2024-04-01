@@ -22,7 +22,7 @@ const CartItem=({ product }) =>{
   return (
     <div className="p-4 shadow-lg flex items-center justify-between">
       <motion.div whileHover={{ scale: 1.1 }}>
-        <Image src={product.image} alt={product.name} width={100} height={100} className='object-fit' />
+        <Image src={product.imageUrl} alt={product.name} width={100} height={100} className='object-fit' />
       </motion.div>
       <div className='flex flex-col items-center justify-center '>
         <Link href={`/product/${product.id}`} className=" font-bold text-sm md:text-lg">
