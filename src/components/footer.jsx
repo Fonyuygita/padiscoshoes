@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { useState, useEffect } from 'react';
+import AdToCart from './cart-logo';
 
 export default function Footer() {
   const [timer, setTimer] = useState('00:00:00');
@@ -49,9 +50,9 @@ export default function Footer() {
         <Image src="/facebook.png" alt="github" width={24} height={24} />
     </Link>
 
-    <Link href="">
-        <Image src="/linkedin.png" alt="github" width={24} height={24} />
-    </Link>
+   
+      <AdToCart/>
+   
         </div>
       </div>
       <div className="text-center mt-4  gap-8 flex items-center justify-center flex-col md:flex-row  hidden ">

@@ -1,24 +1,52 @@
 "use client";
 
+import { useCart } from "@/ContextProvider";
 import { products } from "@/lib/products";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
+import { useState } from "react";
 import { toast } from "react-toastify";
 
 export default function Cart({params}) {
-  const {id}=params
-  // console.log(typeof(id));
   const router=useRouter()
+  const {id}=params
+  const [selected, setSelected] = useState('40');
+  const {addItem, items}=useCart()
+
+  // console.log(typeof(id));
+ 
 
   const findProduct=products.find(product=>product.id===parseInt(id))
   // console.log(findProduct);
   // Sample product data
 
+
+
+    // add to cart functionality
+    const addToCart = () => {
+      if(!findProduct){
+        return
+      }
+         addItem(findProduct, selected)
+         toast.success("Order successfully added to cart");
+         router.push('/cart');
+      
+        }
+      
+        //display project that match the incoming id
+      
+      
+        // what if product is not found
+        if (!findProduct) {
+          return <p className="text-red-800">Sorry product not found!!!!</p>
+        }
+      
+      
+
   const handleOrder=()=>{
-    toast.success("Order successfully added to cart");
-    router.push('/cart');
+    
   }
   
   return (
@@ -44,6 +72,7 @@ export default function Cart({params}) {
             <div className="flex items-center justify-center gap-4">
               {findProduct.sizes.map((s) => (
                 <span
+                onClick={()=>setSelected(s.size)}
                   key={s.size}
                   className={`text-white ${s.bg} rounded-full w-10 h-10 flex items-center justify-center cursor-pointer`}
                 >
@@ -61,7 +90,7 @@ export default function Cart({params}) {
 
               <div className="mt-4">
                 <button
-                onClick={handleOrder}
+                onClick={addToCart}
                   
                   className="bg-blue-500 hover:bg-blue-700 outline-none border-none text-white font-bold flex justify-center items-center rounded-full h-14 w-14 absolute top-[46px] right-[48px]"
                 >

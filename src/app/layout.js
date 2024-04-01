@@ -1,6 +1,7 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
 import PageTransitionProvider from "@/components/PageTransitionProvider";
+import CartProvider from "@/ContextProvider";
 
 
 
@@ -16,7 +17,10 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={`${inter.className} bg-black`}>
+      <CartProvider>
      <PageTransitionProvider>{children}</PageTransitionProvider>
+
+      </CartProvider>
       </body>
     </html>
   );

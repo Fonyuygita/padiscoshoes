@@ -1,60 +1,63 @@
 "use client"
+import { useCart } from '@/ContextProvider'
 import CartItem from '@/components/add-to-cart'
+import { products } from '@/lib/products'
 
 import { useRouter } from 'next/navigation'
 import React from 'react'
 import { toast } from 'react-toastify'
 
-const products=[
+// const products=[
     
-    {
+//     {
 
-        id: 1,
-        name: "Vintage Camera",
-        description: "A perfect camera for photography enthusiasts.",
-        image:
-          "https://images.pexels.com/photos/298864/pexels-photo-298864.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-          price:123,
-          quantity:0},
-          {
+//         id: 1,
+//         name: "Vintage Camera",
+//         description: "A perfect camera for photography enthusiasts.",
+//         image:
+//           "https://images.pexels.com/photos/298864/pexels-photo-298864.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+//           price:123,
+//           quantity:0},
+//           {
 
-            id: 2,
-            name: "Vintage Camera",
-            description: "A perfect camera for photography enthusiasts.",
-            image:
-              "https://images.pexels.com/photos/298864/pexels-photo-298864.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-              price:123,
-              quantity:0},
+//             id: 2,
+//             name: "Vintage Camera",
+//             description: "A perfect camera for photography enthusiasts.",
+//             image:
+//               "https://images.pexels.com/photos/298864/pexels-photo-298864.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+//               price:123,
+//               quantity:0},
 
-              {
+//               {
 
-                id: 3,
-                name: "Vintage Camera",
-                description: "A perfect camera for photography enthusiasts.",
-                image:
-                  "https://images.pexels.com/photos/298864/pexels-photo-298864.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-                  price:123,
-                  quantity:0},
-                  {
+//                 id: 3,
+//                 name: "Vintage Camera",
+//                 description: "A perfect camera for photography enthusiasts.",
+//                 image:
+//                   "https://images.pexels.com/photos/298864/pexels-photo-298864.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+//                   price:123,
+//                   quantity:0},
+//                   {
 
-                    id: 4,
-                    name: "Vintage Camera",
-                    description: "A perfect camera for photography enthusiasts.",
-                    image:
-                      "https://images.pexels.com/photos/298864/pexels-photo-298864.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-                      price:123,
-                      quantity:0},
+//                     id: 4,
+//                     name: "Vintage Camera",
+//                     description: "A perfect camera for photography enthusiasts.",
+//                     image:
+//                       "https://images.pexels.com/photos/298864/pexels-photo-298864.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+//                       price:123,
+//                       quantity:0},
             
     
 
           
-]
+// ]
 
    
 
 
 
 const CartPage = () => {
+  const {items, totalPrice}=useCart()
 
     const router=useRouter()
 
@@ -64,7 +67,7 @@ const CartPage = () => {
       }
   return (
     <>
-    {products.map(product=>(
+    {items.map(product=>(
 
         <CartItem product={product} key={product.id}/>
 
