@@ -15,7 +15,7 @@ const [items, setItems] = useState(parsedItems);
   const addItem = (product, size) => {
 setItems(product)
 
-    // create a check point to avoid duplicating items in your items
+    // created a check point to avoid duplicating items in your items
 // const existingItem=items.find(item=>item.name===product.name && item.size===size);
 
 const existingItem=items.find((item)=>item.name===product.name && item.sizes===size)
@@ -30,7 +30,7 @@ if(existingItem){
   return
 }
 
-// if the item does not exist, create a new one  
+// if the items does not exist, create a new one  
 
 
     const newCartItem= {

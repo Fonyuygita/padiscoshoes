@@ -11,16 +11,7 @@ const CartItem=({ product }) =>{
   const {updatedQuantity, addItems} = useCart();
   const [quantity, setQuantity] = useState(product.quantity);
 const {totalPrice}=useCart()
-  const handleIncrease = () => {
-    setQuantity(prev => prev + 1);
-  };
-
-  const handleDecrease = () => {
-    if (quantity > 1) {
-      setQuantity(prev => prev - 1);
-    }
-  };
-
+  
   return (
     <div className="p-4 shadow-lg flex items-center justify-between">
       <motion.div whileHover={{ scale: 1.1 }}>
