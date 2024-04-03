@@ -2,6 +2,8 @@
 import { useCart } from '@/ContextProvider'
 import CartItem from '@/components/add-to-cart'
 import { products } from '@/lib/products'
+import {FaPlus} from "react-icons/fa"
+import Link from "next/link"
 
 import { useRouter } from 'next/navigation'
 import React from 'react'
@@ -72,8 +74,9 @@ const CartPage = () => {
         <CartItem product={product} key={product.id}/>
 
     ))}
-    <div className="flex items-center justify-center w-[40%] mx-auto mt-4">
- <button onClick={handleCheckedOut}  className="outline-none border-none text-sm p-2 lg:p-4 rounded-lg ring-1 text-white bg-blue-700 w-full text-center hover:bg-blue-500">Checkout</button>
+    <div className="flex items-center justify-center w-[30%] mx-auto mt-4 gap-6">
+    <Link href="/gallery"   className="outline-none border-none text-sm p-2 lg:p-4  ring-1 text-white bg-blue-700 w-full text-center hover:bg-blue-500 flex items-center justify-center gap-3 rounded-full md:rounded-lg"> <span className="hidden md:flex">Add More</span>  <FaPlus/></Link>
+ <button onClick={handleCheckedOut}  className="outline-none border-none text-sm p-2 lg:p-4 rounded-lg ring-1 text-white bg-red-800 w-full text-center hover:bg-red-500">Checkout</button>
  </div>
     </>
   )

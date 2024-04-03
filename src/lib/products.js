@@ -11,7 +11,7 @@ description: "Step into sophistication with Serenzo Classico shoes. Designed in 
         { size: "41", bg: "bg-blue-600" },
         { size: "42", bg: "bg-black" },
       ],
-      quantity:0,
+      quantity:1,
       images: [
         "https://images.pexels.com/photos/298863/pexels-photo-298863.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
         "https://images.pexels.com/photos/298863/pexels-photo-298863.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
@@ -32,7 +32,7 @@ description: "Make a statement with Elegante Cuoio shoes. These Italian-crafted 
         { size: "41", bg: "bg-blue-600" },
         { size: "42", bg: "bg-black" },
       ],
-      quantity:0,
+      quantity:1,
       images: [
         "https://images.pexels.com/photos/298863/pexels-photo-298863.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
         "https://images.pexels.com/photos/298863/pexels-photo-298863.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
@@ -53,7 +53,7 @@ description: "Make a statement with Elegante Cuoio shoes. These Italian-crafted 
     { size: "41", bg: "bg-blue-600" },
     { size: "42", bg: "bg-black" },
   ],
-  quantity:0,
+  quantity:1,
   images: [
     "https://images.pexels.com/photos/298863/pexels-photo-298863.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
     "https://images.pexels.com/photos/298863/pexels-photo-298863.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
@@ -74,7 +74,7 @@ description: "Experience imperial elegance with Raffinato Imperiale shoes. Craft
         { size: "41", bg: "bg-blue-600" },
         { size: "42", bg: "bg-black" },
       ],
-      quantity:0,
+      quantity:1,
       images: [
         "https://images.pexels.com/photos/298863/pexels-photo-298863.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
         "https://images.pexels.com/photos/298863/pexels-photo-298863.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
@@ -94,7 +94,7 @@ description: "Experience imperial elegance with Raffinato Imperiale shoes. Craft
         { size: "41", bg: "bg-blue-600" },
         { size: "42", bg: "bg-black" },
       ],
-      quantity:0,
+      quantity:1,
       images: [
         "https://images.pexels.com/photos/298863/pexels-photo-298863.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
         "https://images.pexels.com/photos/298863/pexels-photo-298863.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
@@ -114,7 +114,7 @@ description: "Experience imperial elegance with Raffinato Imperiale shoes. Craft
         { size: "41", bg: "bg-blue-600" },
         { size: "42", bg: "bg-black" },
       ],
-      quantity:0,
+      quantity:1,
       images: [
         "https://images.pexels.com/photos/298863/pexels-photo-298863.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
         "https://images.pexels.com/photos/298863/pexels-photo-298863.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
@@ -134,7 +134,7 @@ description: "Experience imperial elegance with Raffinato Imperiale shoes. Craft
         { size: "41", bg: "bg-blue-600" },
         { size: "42", bg: "bg-black" },
       ],
-      quantity:0,
+      quantity:1,
       images: [
         "https://images.pexels.com/photos/298863/pexels-photo-298863.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
         "https://images.pexels.com/photos/298863/pexels-photo-298863.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
@@ -154,7 +154,7 @@ description: "Experience imperial elegance with Raffinato Imperiale shoes. Craft
         { size: "41", bg: "bg-blue-600" },
         { size: "42", bg: "bg-black" },
       ],
-      quantity:0,
+      quantity:1,
       images: [
         "https://images.pexels.com/photos/298863/pexels-photo-298863.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
         "https://images.pexels.com/photos/298863/pexels-photo-298863.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
@@ -174,7 +174,7 @@ description: "Experience excellence with Eccellenza Italiana shoes. Handcrafted 
         { size: "41", bg: "bg-blue-600" },
         { size: "42", bg: "bg-black" },
       ],
-      quantity:0,
+      quantity:1,
       images: [
         "https://images.pexels.com/photos/298863/pexels-photo-298863.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
         "https://images.pexels.com/photos/298863/pexels-photo-298863.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
@@ -194,7 +194,7 @@ description: "Experience excellence with Eccellenza Italiana shoes. Handcrafted 
         { size: "41", bg: "bg-blue-600" },
         { size: "42", bg: "bg-black" },
       ],
-      quantity:0,
+      quantity:1,
       images: [
         "https://images.pexels.com/photos/298863/pexels-photo-298863.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
         "https://images.pexels.com/photos/298863/pexels-photo-298863.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
@@ -215,7 +215,7 @@ description: "Experience excellence with Eccellenza Italiana shoes. Handcrafted 
         { size: "41", bg: "bg-blue-600" },
         { size: "42", bg: "bg-black" },
       ],
-      quantity:0,
+      quantity:1,
       images: [
         "https://images.pexels.com/photos/298863/pexels-photo-298863.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
         "https://images.pexels.com/photos/298863/pexels-photo-298863.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
@@ -236,7 +236,7 @@ description: "Experience excellence with Eccellenza Italiana shoes. Handcrafted 
         { size: "41", bg: "bg-blue-600" },
         { size: "42", bg: "bg-black" },
       ],
-      quantity:0,
+      quantity:1,
       images: [
         "https://images.pexels.com/photos/298863/pexels-photo-298863.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
         "https://images.pexels.com/photos/298863/pexels-photo-298863.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
@@ -257,7 +257,7 @@ description: "Experience excellence with Eccellenza Italiana shoes. Handcrafted 
     { size: "41", bg: "bg-blue-600" },
     { size: "42", bg: "bg-black" },
   ],
-  quantity:0,
+  quantity:1,
   images: [
     "https://images.pexels.com/photos/298863/pexels-photo-298863.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
     "https://images.pexels.com/photos/298863/pexels-photo-298863.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
@@ -278,7 +278,7 @@ description: "Experience excellence with Eccellenza Italiana shoes. Handcrafted 
         { size: "41", bg: "bg-blue-600" },
         { size: "42", bg: "bg-black" },
       ],
-      quantity:0,
+      quantity:1,
       images: [
         "https://images.pexels.com/photos/298863/pexels-photo-298863.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
         "https://images.pexels.com/photos/298863/pexels-photo-298863.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
@@ -298,7 +298,7 @@ description: "Experience excellence with Eccellenza Italiana shoes. Handcrafted 
         { size: "41", bg: "bg-blue-600" },
         { size: "42", bg: "bg-black" },
       ],
-      quantity:0,
+      quantity:1,
       images: [
         "https://images.pexels.com/photos/298863/pexels-photo-298863.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
         "https://images.pexels.com/photos/298863/pexels-photo-298863.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
@@ -318,7 +318,7 @@ description: "Experience excellence with Eccellenza Italiana shoes. Handcrafted 
         { size: "41", bg: "bg-blue-600" },
         { size: "42", bg: "bg-black" },
       ],
-      quantity:0,
+      quantity:1,
       images: [
         "https://images.pexels.com/photos/298863/pexels-photo-298863.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
         "https://images.pexels.com/photos/298863/pexels-photo-298863.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
@@ -338,7 +338,7 @@ description: "Experience excellence with Eccellenza Italiana shoes. Handcrafted 
         { size: "41", bg: "bg-blue-600" },
         { size: "42", bg: "bg-black" },
       ],
-      quantity:0,
+      quantity:1,
       images: [
         "https://images.pexels.com/photos/298863/pexels-photo-298863.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
         "https://images.pexels.com/photos/298863/pexels-photo-298863.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
@@ -358,7 +358,7 @@ description: "Experience excellence with Eccellenza Italiana shoes. Handcrafted 
         { size: "41", bg: "bg-blue-600" },
         { size: "42", bg: "bg-black" },
       ],
-      quantity:0,
+      quantity:1,
       images: [
         "https://images.pexels.com/photos/298863/pexels-photo-298863.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
         "https://images.pexels.com/photos/298863/pexels-photo-298863.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
@@ -378,7 +378,7 @@ description: "Experience excellence with Eccellenza Italiana shoes. Handcrafted 
         { size: "41", bg: "bg-blue-600" },
         { size: "42", bg: "bg-black" },
       ],
-      quantity:0,
+      quantity:1,
       images: [
         "https://images.pexels.com/photos/298863/pexels-photo-298863.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
         "https://images.pexels.com/photos/298863/pexels-photo-298863.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
@@ -398,7 +398,7 @@ description: "Experience excellence with Eccellenza Italiana shoes. Handcrafted 
         { size: "41", bg: "bg-blue-600" },
         { size: "42", bg: "bg-black" },
       ],
-      quantity:0,
+      quantity:1,
       images: [
         "https://images.pexels.com/photos/298863/pexels-photo-298863.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
         "https://images.pexels.com/photos/298863/pexels-photo-298863.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",

@@ -12,8 +12,8 @@ import { toast } from "react-toastify";
 export default function Cart({params}) {
   const router=useRouter()
   const {id}=params
-  const [selected, setSelected] = useState('40');
-  const {addItem, items}=useCart()
+  const [selected, setSelected] = useState('');
+  const {addItem, items, totalPrice}=useCart()
 
   // console.log(typeof(id));
  
@@ -69,13 +69,13 @@ export default function Cart({params}) {
             {/*sizes*/}
             <div className="flex items-center justify-center gap-4">
               {findProduct.sizes.map((s) => (
-                <span
+                <button
                 onClick={()=>setSelected(s.size)}
                   key={s.size}
-                  className={`text-white ${s.bg} rounded-full w-10 h-10 flex items-center justify-center cursor-pointer`}
+                  className={`text-white ${s.bg} rounded-full w-10 h-10 flex items-center justify-center cursor-pointer ${selected===s.size ? "bg-green-500 text-black" : "bg-green"} `}
                 >
                   {s.size}
-                </span>
+                </button>
               ))}
             </div>
             <div className="flex gap-4 p-45 items-center justify-center bg-gradient-to-b from-yellow-300 to-black text-gray-300 mb-2 ">

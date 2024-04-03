@@ -1,17 +1,25 @@
 "use client"
 
-import { createContext, useContext, useState } from "react";
+import { createContext, useContext, useEffect, useState } from "react";
 
 
 const CartContext = createContext()
 
 const CartProvider = ({children}) => {
-  const [items, setItems] = useState([]);
-  const addItem = (product, size) => {
+// Retrieve items from localStorage
+const storedItems = localStorage.getItem('items');
+const parsedItems = storedItems ? JSON.parse(storedItems) : [];
 
+// Set the retrieved items as initial state using useState
+const [items, setItems] = useState(parsedItems);
+  const addItem = (product, size) => {
+setItems(product)
 
     // create a check point to avoid duplicating items in your items
-const existingItem=items.find(item=>item.product===product && item.size===size);
+// const existingItem=items.find(item=>item.name===product.name && item.size===size);
+
+const existingItem=items.find((item)=>item.name===product.name && item.sizes===size)
+console.log(existingItem);
 
 // if here is an existing item already in our list we want to update it instead of recreating it from scratch
 
@@ -27,10 +35,11 @@ if(existingItem){
 
     const newCartItem= {
       ...product,
+      sizes:size
     };
 
     setItems([newCartItem, ...items]);
-    console.log(items);
+    // console.log(items);
   };
 
   // updated quantity functionality
@@ -48,10 +57,20 @@ if(existingItem){
     setItems(filteredItem);
   };
 // calculate the total price according to  quantity selected by user
-  const totalPrice=items.reduce((sum, item)=>(sum+=item.price * item.quantity ), 0);
+
+useEffect(() => {
+  // Store the items in localStorage whenever it changes
+  localStorage.setItem('items', JSON.stringify(items));
+}, [items])
+
+
+  const totalPrice=items.reduce((sum, item)=>(sum+=parseInt(item.price) * parseInt(item.quantity) ), 0);
+  
+ 
+  // console.log(totalPrice)
 
   return (
-    <CartContext.Provider value={{ items, addItem, updatedQuantity, totalPrice }}>
+    <CartContext.Provider value={{ items, addItem, updatedQuantity, totalPrice,  }}>
       {children}
     </CartContext.Provider>
   );

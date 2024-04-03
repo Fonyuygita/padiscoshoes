@@ -7,9 +7,15 @@ import Link from "next/link"
 import Image from "next/image"
 import NavLink from "./navLink"
 import AdToCart from "./cart-logo"
+import { useCart } from "@/ContextProvider"
 
 const Navbar = () => {
-
+    const {items}=useCart()
+    const quantities = items.map(item => item.quantity);
+    const totalQuantity = quantities.reduce((total, quantity) => total + quantity, 0);
+    // console.log(totalQuantity);
+    // const quantity=items.map((item)=>[item.quantity])
+    // console.log(quantity);
     const [isOpen, setIsOpen] = useState(false)
     // menu list
 
@@ -133,7 +139,7 @@ const Navbar = () => {
                 <Link href="">
                     <Image src="/linkedin.png" alt="github" width={24} height={24} />
                 </Link>
-                <AdToCart/>
+                <AdToCart quantity={totalQuantity}/>
 
             </div>
 
@@ -145,10 +151,10 @@ const Navbar = () => {
 
                 {/*  CREATE MENU BUTTON FOR MOBILE*/}
 
-                <button className="w-10 h-8 flex flex-col justify-between cursor-pointer z-50 relative" onClick={() => setIsOpen(!isOpen)}>
-                    <motion.div variants={topVariant} animate={isOpen ? "open" : "closed"} className="w-10 h-1 bg-black rounded origin-left"></motion.div>
-                    <motion.div variants={centerVariant} animate={isOpen ? "open" : "closed"} className="w-10 h-1 bg-black rounded"></motion.div>
-                    <motion.div variants={bottomVariant} animate={isOpen ? "open" : "closed"} className="w-10 h-1 bg-black rounded origin-left"></motion.div>
+                <button className="w-7 h-5 flex flex-col justify-between cursor-pointer z-50 relative" onClick={() => setIsOpen(!isOpen)}>
+                    <motion.div variants={topVariant} animate={isOpen ? "open" : "closed"} className="w-7 h-1 bg-black rounded origin-left"></motion.div>
+                    <motion.div variants={centerVariant} animate={isOpen ? "open" : "closed"} className="w-7 h-1 bg-black rounded"></motion.div>
+                    <motion.div variants={bottomVariant} animate={isOpen ? "open" : "closed"} className="w-7 h-1 bg-black rounded origin-left"></motion.div>
                 </button>
                 {/*  END MENU BUTTON*/}
 

@@ -4,8 +4,13 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { useState, useEffect } from 'react';
 import AdToCart from './cart-logo';
+import { useCart } from '@/ContextProvider';
 
 export default function Footer() {
+  const {items}=useCart()
+  const quantities = items.map(item => item.quantity);
+  const totalQuantity = quantities.reduce((total, quantity) => total + quantity, 0);
+  // console.log(totalQuantity);
   const [timer, setTimer] = useState('00:00:00');
 
   useEffect(() => {
@@ -51,7 +56,7 @@ export default function Footer() {
     </Link>
 
    
-      <AdToCart/>
+      <AdToCart quantity={totalQuantity}/>
    
         </div>
       </div>
