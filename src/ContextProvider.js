@@ -1,76 +1,65 @@
 "use client"
-
 import { createContext, useContext, useEffect, useState } from "react";
 
+const CartContext = createContext();
 
-const CartContext = createContext()
+const CartProvider = ({ children }) => {
+  const [items, setItems] = useState([]);
 
-const CartProvider = ({children}) => {
-// Retrieve items from localStorage
-const storedItems = localStorage.getItem('items');
-const parsedItems = storedItems ? JSON.parse(storedItems) : [];
-
-// Set the retrieved items as initial state using useState
-const [items, setItems] = useState(parsedItems);
   const addItem = (product, size) => {
-setItems(product)
+    const existingItem = items.find(
+      (item) => item.name === product.name && item.sizes === size
+    );
 
-    // created a check point to avoid duplicating items in your items
-// const existingItem=items.find(item=>item.name===product.name && item.size===size);
+    if (existingItem) {
+      updatedQuantity(existingItem.id, 1);
+      return;
+    }
 
-const existingItem=items.find((item)=>item.name===product.name && item.sizes===size)
-console.log(existingItem);
-
-// if here is an existing item already in our list we want to update it instead of recreating it from scratch
-
-if(existingItem){
-  // call the update function here
-  updatedQuantity(existingItem.id, 1)
-  // then stop the execution
-  return
-}
-
-// if the items does not exist, create a new one  
-
-
-    const newCartItem= {
+    const newCartItem = {
       ...product,
-      sizes:size
+      sizes: size,
     };
 
     setItems([newCartItem, ...items]);
-    // console.log(items);
   };
 
-  // updated quantity functionality
-
   const updatedQuantity = (id, amount) => {
-    // update updated quantity, if id matches
-    const updateQuantity = items.map((item) =>
+    const updatedItems = items.map((item) =>
       item.id !== id ? item : { ...item, quantity: amount + item.quantity }
     );
 
-    // do not show item if quantity is 0, w'll filter our item above
+    const filteredItems = updatedItems.filter((item) => item.quantity > 0);
 
-    const filteredItem = updateQuantity.filter((item) => item.quantity > 0);
-
-    setItems(filteredItem);
+    setItems(filteredItems);
   };
-// calculate the total price according to  quantity selected by user
 
-useEffect(() => {
-  // Store the items in localStorage whenever it changes
-  localStorage.setItem('items', JSON.stringify(items));
-}, [items])
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      const storedItems = localStorage.getItem("items");
+      const parsedItems = storedItems ? JSON.parse(storedItems) : [];
+      setItems(parsedItems);
+      
+    }
+  }, []);
 
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      localStorage.setItem("items", JSON.stringify(items));
+      // console.log(items);
+    }
+  }, [items]);
 
-  const totalPrice=items.reduce((sum, item)=>(sum+=parseInt(item.price) * parseInt(item.quantity) ), 0);
-  
- 
-  // console.log(totalPrice)
+  const totalPrice = items.reduce(
+    (sum, item) =>
+      (sum += parseInt(item.price) * parseInt(item.quantity)),
+    0
+  );
 
   return (
-    <CartContext.Provider value={{ items, addItem, updatedQuantity, totalPrice,  }}>
+    <CartContext.Provider
+      value={{ items, addItem, updatedQuantity, totalPrice }}
+    >
       {children}
     </CartContext.Provider>
   );
