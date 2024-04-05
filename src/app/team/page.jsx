@@ -4,35 +4,50 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { motion, useAnimation } from 'framer-motion';
 import { useEffect } from 'react';
+import JoinUs from '@/components/join-us';
 
 const teamMembers = [
  
   {
-    name: 'John Doe',
-    position: 'CEO',
+    name: 'Fonyuy Patrick',
+    position: 'Founder',
     image: 'https://images.pexels.com/photos/14940468/pexels-photo-14940468.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+    icons:[{logo:'/facebook.png'}, {logo:'/instagram.png'}, {logo:'/linkedin.png'}]
   },
 
   {
-    name: 'John Doe',
-    position: 'CEO',
+    name: 'Fonyuy Jean Paul',
+    position: 'Chief Executive Officer',
     image: 'https://images.pexels.com/photos/5816260/pexels-photo-5816260.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+    description: 'Aspiring Teacher with a Bsc in Economics.',
+    icons:[{logo:'/facebook.png'}, {logo:'/instagram.png'}, {logo:'/linkedin.png'}]
   },
 
   {
-    name: 'John Doe',
-    position: 'CEO',
+    name: 'Fonyuy Leonard',
+    position: 'Chief Technical Officer',
     image: 'https://images.pexels.com/photos/4242520/pexels-photo-4242520.jpeg?auto=compress&cs=tinysrgb&w=600',
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+    icons:[{logo:'/facebook.png'}, {logo:'/instagram.png'}, {logo:'/linkedin.png'}]
   },
+
+  {
+    name: 'Fonyuy Gita',
+    position: 'Software Engineer',
+    image: 'https://images.pexels.com/photos/4242520/pexels-photo-4242520.jpeg?auto=compress&cs=tinysrgb&w=600',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+    icons:[{logo:'/facebook.png'}, {logo:'/instagram.png'}, {logo:'/linkedin.png'}]
+  },
+
+  
 
   {
     name: 'John Doe',
     position: 'CEO',
     image: 'https://images.pexels.com/photos/1181695/pexels-photo-1181695.jpeg?auto=compress&cs=tinysrgb&w=600',
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+    icons:[{logo:'/facebook.png'}, {logo:'/instagram.png'}, {logo:'/linkedin.png'}]
   },
   // Add more team members here
 ];
@@ -48,21 +63,16 @@ const TeamPage = () => {
     initial={{ y: "-200vh" }}
     animate={{ y: "0%" }}
     transition={{ duration: 1 }}>
-    <div className="h-full overflow-scroll flex flex-col items-center justify-center min-h-screen ">
+    <div className="h-full overflow-scroll flex flex-col items-center justify-center min-h-screen bg-gradient-to-b from-yellow-300 to-yellow-800 ">
       <h1 className="text-4xl font-bold mt-8 mb-12">Our Team</h1>
       <div className="grid gap-8 grid-cols-1 mx-auto padding-5 md:grid-cols-2 lg:grid-cols-3">
         {teamMembers.map((member, index) => (
           <motion.div
             key={index}
-            initial="hidden"
-            animate={controls}
-            variants={{
-              visible: { opacity: 1, y: 0 },
-              hidden: { opacity: 0, y: 50 },
-            }}
-            transition={{ duration: 0.5 }}
-            whileHover={{ scale: 1.05 }}
-            className="w-[320px] mx-auto bg-gradient-to-b from-yellow-300 to-black text-white rounded-lg shadow-md overflow-hidden"
+            
+              initial={{y:60, opacity:0}} whileInView={{y:0, opacity:1}} transition={{duration:0.9, type:"tween"}}
+           
+            className="relative  w-[320px]  mb-4mx-auto bg-gradient-to-b from-yellow-300 to-yellow-800 text-white rounded-lg shadow-md overflow-hidden"
             
           >
             <div className="relative h-50 mt-3">
@@ -76,19 +86,24 @@ const TeamPage = () => {
               />
             </div>
             <div className="p-6">
-              <h2 className="text-xl font-semibold">{member.name}</h2>
-              <p className="text-gray-500 mb-4">{member.position}</p>
-              <p className="text-gray-600">{member.description}</p>
-              <Link href="/" lassName="inline-block mt-4 px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 transition-colors duration-300 mt-[2rem]">
-               
-                  View Profile
-             
+              <h2 className="text-xl  text-center text-black font-bold">{member.name}</h2>
+              <p className="text-blue-950 mb-4 text-center ">{member.position}</p>
+              <p className="text-gray-900 text-center">{member.description}</p>
+            <div className="absolute flex items-center flex-col  justify-center gap-5 top-6 left-4">
+            {member.icons.map(icon=>(
+              <Link href="" key={icon.logo}>
+              <Image src={icon.logo} alt='socials' width={25} height={25} className='rounded-full'/>
               </Link>
+            ))}
+            
+            </div>
             </div>
           </motion.div>
         ))}
       </div>
+      <JoinUs/>
     </div>
+    
     </motion.section>
   );
 };

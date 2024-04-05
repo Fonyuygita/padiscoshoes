@@ -31,7 +31,7 @@ export default function Footer() {
   }, []);
 
   return (
-    <footer className="fixed h-12 md:h-24 w-full mx-auto mt-4 bottom-0 bg-black text-white p-3 flex flex-col  justify-center items-center md:flex-row">
+    <footer className="fixed  h-12 md:h-24 w-full mx-auto  bottom-0 bg-black text-white p-3 flex flex-col mt-6  justify-center items-center md:flex-row">
       <div className="container mx-auto flex justify-center gap-12 items-center flex-col md:flex-row">
         <div className="flex space-x-4 text-sm hidden">
           <Link href="/about" className="hover:underline">About</Link>

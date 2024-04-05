@@ -16,7 +16,7 @@ const PageTransitionProvider = ({ children }) => {
         key={pathname==='/about' ? 
       <Image src="/padlogo.png" alt="logo" width={200} height={200} className="rounded-full h-23 w-23 bg-red-600 z-40"/> : pathname
       }
-        className="w-screen h-screen bg-gradient-to-b from-yellow-300 to-black"
+        className="w-screen h-screen bg-gradient-to-b from-yellow-300 to-black scroll-smooth"
       >
         {/* first page animation*/}
         <motion.div

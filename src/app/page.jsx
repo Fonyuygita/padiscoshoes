@@ -16,7 +16,7 @@ const HomePage = () => {
     >
       <div className="h-full min-h-full flex mb-6 flex-col px-4 gap-4 lg:flex-row sm:px-8 md:px-12 lg:px-20 xl:px-48">
         {/*image container*/}
-        <div className="h-1/3 lg:h-full mx-auto  lg:w-1/2 relative mt-4">
+        <div className="h-1/3 lg:h-full mx-auto  lg:w-1/2 relative mt-4 lg:mt-8">
           <Image
             src="/padisco.png"
             alt="hero"
@@ -28,7 +28,7 @@ const HomePage = () => {
         {/*end of image container*/}
 
         {/*text container*/}
-        <div className="mt-14 h-1/2  lg:w-1/2 lg:h-full flex flex-col gap-3  items-center justify-center m-auto md:mt-0 text-center lg:text-left">
+        <div className="mt-14 h-1/2  lg:w-1/2 lg:h-full flex flex-col gap-3 flex-start  justify-center m-auto md:mt-0 text-center lg:text-left">
           {/*TITLE*/}
           <h1 className="text-2xl font-bold md:text-4xl">
           {text.split("").map((letter, index) => (

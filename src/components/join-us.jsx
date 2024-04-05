@@ -2,8 +2,8 @@ const { default: Link } = require("next/link")
 import {motion} from "framer-motion"
 const JoinUs=()=>{
     return(
-        <div className="w-screen h-screen flex flex-col gap-16 items-center justify-center text-center">
-        <h1 className="text-8xl">Do you have a project?</h1>
+        <div className="w-screen h-calc([100vh-400px]) mt-7 flex flex-col gap-16 items-center justify-center bg-gradient-to-b from-yellow-300 to-black text-center">
+        <h1 className="text-2xl">Want to do A Command?</h1>
         <div className="relative">
           <motion.svg
             animate={{ rotate: 360 }}
