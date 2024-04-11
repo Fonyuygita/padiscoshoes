@@ -1,5 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
+import Link from "next/link"
 
 import Image from "next/image";
 import React from "react";
@@ -28,9 +29,9 @@ const HomePage = () => {
         {/*end of image container*/}
 
         {/*text container*/}
-        <div className="mt-14 h-1/2  lg:w-1/2 lg:h-full flex flex-col gap-3 flex-start  justify-center m-auto md:mt-0 text-center lg:text-left">
+        <div className="mt-14 h-1/2  lg:w-1/2 lg:h-full flex flex-col gap-3 flex-start  justify-center m-auto md:mt-0 text-center lg:text-left ">
           {/*TITLE*/}
-          <h1 className="text-2xl font-bold md:text-4xl">
+          <h1 className="text-2xl font-bold md:text-4xl bg-gray-900 text-white p-1 rounded-lg z-45">
           {text.split("").map((letter, index) => (
             <motion.span
               key={index}
@@ -51,17 +52,20 @@ const HomePage = () => {
 
           {/*DESCRIPTION*/}
           <p className="text-white text-sm md:text-lg font-serif">
-            You d escribe we design and make for you
+            You describe we design and make for you
           </p>
 
           {/*buttons*/}
-          <div className="lg:w-full flex gap-4">
+          <div className="lg:w-full flex gap-4 items-center justify-center md:items-start md:justify-start">
             <button className="text-sm p-2 lg:p-4 rounded-lg ring-1 ring-black bg-white text-black">
               View Our Work
             </button>
+            <Link href="/contact">
             <button className="text-sm p-2 lg:p-4 rounded-lg ring-1 text-white bg-blue-700">
-              Contact Us
-            </button>
+            Contact Us
+          </button>
+            </Link>
+          
           </div>
         </div>
 

@@ -39,8 +39,11 @@ export default function Footer() {
           <Link href="/contact" className="hover:underline">Contact</Link>
         </div>
         <div className="flex space-x-4"> 
-        <Link href="">
-        <Image src="/dribbble.png" alt="github" width={24} height={24} />
+
+
+
+        <Link href="https://wa.me/+237672221315" target="_blank " rel="noopener noreferrror" >
+        <Image src="/whatsapp.png" alt="github" width={24} height={24} />
     </Link>
 
     <Link href="">
